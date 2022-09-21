@@ -1,0 +1,267 @@
+$base-dark: #9B9B9B;
+$base-light: whitesmoke;
+$bg-aside: #6e6e6e;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 5px 100px 5px 100px;
+    background-color: $base-light;
+    transition: 400ms;
+    
+    .circle-nav {
+        width: 18px;
+        height: 18px;
+        padding: 5px;
+        border-radius: 50px;
+        cursor: pointer;
+        i {color: $base-dark;}
+    }
+ 
+    .sosmed, .navigasi {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .sosmed {width: 160px;}
+
+    .navigasi {
+        width: 100px;
+        float: right;
+    }
+
+    .logo {
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .hamberger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+  
+        .line {
+            height: 5px;
+            background-color: $base-dark;
+            border-radius: 2px;
+            &:nth-child(2) {
+                width: 60%;
+                align-self: flex-end;
+            }
+        }
+    }
+}
+
+header aside {
+    box-sizing: border-box;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 80%;
+    height: 100%;
+    transform: translateX(0%);
+    background-color: $bg-aside;
+    transition: {
+        duration: 300ms;
+        animation-timing-function: ease-out;
+    };
+
+    .exit {
+        display: flex;
+        cursor: pointer;
+        margin-bottom: 15px;
+        .circle-cross {
+            padding: 3px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    .cross {
+        width: 30px;
+        height: 30px;
+        position: relative;
+
+        .line {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            .sub-line {
+                width: 100%;
+                height: 5px;
+                background-color: $base-light;
+                border-radius: 20px;
+            }
+
+            &:first-child .sub-line {transform: rotate(45deg);}
+            &:last-child .sub-line {transform: rotate(-45deg);} 
+        }  
+    }
+}
+
+$sdr-range: 10px;
+
+header aside nav {
+    color: $base-light;
+    text-transform: capitalize;
+
+    & > * {
+        margin-bottom: $sdr-range;
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        width: 25px;
+    }
+
+    .separator {
+        height: 2px;
+        background-color: $base-light;
+        border-radius: 20px;
+    }
+
+    .arrow {
+        width: 10px;
+        height: 10px;
+        border-top: 3px solid $base-light;
+        border-left: 3px solid $base-light;
+        transition: {
+            duration: 300ms;
+            animation-timing-function: ease-out;
+        };
+    }
+
+    .nav-title {
+        margin-left: 8px;
+    }
+
+    .nav-el:first-child, .nav-el:nth-child(7) {
+        position: relative;
+        display: grid;
+        grid: {
+            template-columns: max-content auto 20px;
+            template-rows: max-content max-content;
+            template-areas: 'satu dua tiga'
+                            'empat empat empat';
+            gap: 8px;
+        }
+
+        .click {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 25px;
+        }
+
+        i {grid-area: satu;}
+
+        .nav-title {
+            grid-area: satu;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            margin-left: 25px;
+        }
+
+        .arrow {grid-area: tiga;}
+
+        .input-field, ul {
+            grid-area: empat;
+            border: none;
+            padding: 0;
+            transition: {
+                duration: 300ms;
+                animation-timing-function: ease-out;
+            };
+        }
+
+        .input-field {
+            display: grid;
+            grid: {
+                template-columns: auto max-content;
+                grid-template-rows: max-content;
+            }
+            border-radius: 3px;
+            overflow: hidden;
+            transition: {
+                duration: 300ms;
+                animation-timing-function: ease-out;
+            };
+
+            .btn-search {
+                background-color: $base-light;
+                width: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                i {
+                    color: $base-dark;
+                }
+            }
+
+            input {
+                outline: none;
+                border: none;
+                box-sizing: border-box;
+                padding: 8px;
+                background-color: $base-light;
+                color: rgb(100, 100, 100);
+            }
+        }
+
+        ul {
+            overflow: hidden;
+            box-sizing: inherit;
+            padding-left: 50px;
+            transition: 500ms;
+            li {
+                margin-bottom: $sdr-range;
+
+                &:hover a {
+                    color: rgb(201, 201, 201);
+                }
+                a {
+                    text-transform: inherit;
+                    color: inherit;
+                    text-decoration: inherit;
+                }
+            }
+        }
+    }
+}
+
+.shadow-on {box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);}
+.side-bar-on {transform: translateX(-100%);}
+.arrow-off {transform: rotate(-45deg);}
+.arrow-on {transform: rotate(-135deg);}
+.search-on {height: 30px;}
+.search-off {height: 0;}
+.category-on {height: 95px;}
+.category-off {height: 0;}

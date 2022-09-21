@@ -1,0 +1,10 @@
+header {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+header .hamberger {
+  display: flex;
+}
+header .sosmed, header .navigasi {
+  display: none;
+}

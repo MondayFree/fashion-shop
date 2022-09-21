@@ -1,0 +1,19 @@
+prinsip struktur
+- struktur css akan dibuat satu halaman satu stylesheet
+- jika satu halaman tesebut memiliki css yang sangat banyak, maka akan displit lagi
+- untuk design dari element yang ada di lebih dari satu halaman seperti header dan footer dapat disimpan di dalam module, 
+  dan dipanggil pada css yang untuk satu halaman
+- setiap stylesheet dari satu halaman dapat dibentuk dari lebih dari satu sass
+
+
+element dan design yang akan disimpan di module
+- contacts sosial media
+- search, like, cart
+- slider fashion(yang tiga element)
+- hover harga dan 'add to cart'
+- footer
+
+
+- element dibuat bagian perbagian (total 5 bagian)
+- perhatikan ui ux
+- media query dibuat per halaman

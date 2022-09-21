@@ -1,0 +1,24 @@
+@import 'global.css';
+
+// font-awesome
+@import 'module/font-awesome.css';
+
+@import 'module/header.css';
+
+// responsive
+@import 'module/landing-tablet.css' screen and (max-width: 768px);
+
+
+section {
+    padding-top: 200px;
+}
+.box {
+    width: 100%;
+    height: 300px;
+}
+.box:nth-child(even) {
+    background-color: aqua;
+}
+.box:nth-child(odd) {
+    background-color: salmon;
+}
