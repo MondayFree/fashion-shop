@@ -1,0 +1,15 @@
+.kotak {
+    width: 150px;
+    height: 300px;
+    background-color: slateblue;
+    overflow: auto;
+    margin: auto;
+
+    
+}
+.child {
+    width: 150px;
+    height: 300px;
+}
+.child:nth-child(even) {background-color: red;}
+.child:nth-child(odd) {background-color: blue;}

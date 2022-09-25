@@ -8,3 +8,7 @@ header .hamberger {
 header .sosmed, header .navigasi {
   display: none;
 }
+
+div .intro {
+  grid-template-columns: 100%;
+}

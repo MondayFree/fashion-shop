@@ -7,3 +7,10 @@ header {
     .sosmed, .navigasi {display: none;}
 } 
 // header-end
+
+
+// intro-start
+.intro {
+    div & {grid-template-columns: 100%};
+}
+// intro-end
