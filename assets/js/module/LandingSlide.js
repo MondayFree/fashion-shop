@@ -4,11 +4,11 @@ class LandingSlide {
     #rmvElement;
     #setSlide = {
         behavior: 'smooth',
-        block: 'center', 
+        block: 'nearest', 
         inline: 'center'
     };
     #ivl;
-    #timeIvl = 3500;
+    #timeIvl = 4000;
     #column = 3;
     #mdl = 1;
     #numId = 0;
@@ -20,6 +20,7 @@ class LandingSlide {
         this.#sldElement = slide.firstElementChild;
         this.#rmvElement = slide.firstElementChild;
         this.#elId = this.#slide.firstElementChild;
+        this.startIvl();
     }
 
     #addElement() {

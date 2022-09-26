@@ -1,5 +1,5 @@
 // import
-import * as func from './module/landing-init.js';
+import {HeaderEvent, LandingSlide} from './module/landing-init.js';
 
 
 // header-start
@@ -11,30 +11,24 @@ const header = document.getElementsByTagName('header')[0];
 const show = document.getElementsByClassName('show');
 const click = document.getElementsByClassName('click');
 
-const headerEvent = new func.HeaderEvent(sideBar, arrows, searchField, category, header, show, click);
+const headerEvent = new HeaderEvent(sideBar, arrows, searchField, category, header, show, click);
 // header-end
 
 
 // slider-start
 const slide = document.getElementById('slide');
-const slider = new func.LandingSlide(slide);
+const slider = new LandingSlide(slide);
 
-Array.from(document.getElementsByClassName('btn')).forEach(el => {
+Array.from(document.getElementsByClassName('bullet')).forEach(el => {
     el.addEventListener('click', event => {
         switch(el.id) {
-            case 'play' :
-                slider.startIvl();
-                break;
-            case 'stop' :
-                slider.stopIvl();
-                break;
-            case '1' :
+            case 'one' :
                 slider.manualScroll(1);
                 break;
-            case '2' :
+            case 'two' :
                 slider.manualScroll(2);
                 break;
-            case '3' :
+            case 'three' :
                 slider.manualScroll(3);
         }
     });
@@ -50,7 +44,7 @@ addEventListener('visibilitychange', event => {
 
 let check;
 setInterval(() => {
-    if(scrollY == 0) {
+    if(scrollY <= 60) {
         if(check) {
             slider.startIvl();
             check = false;

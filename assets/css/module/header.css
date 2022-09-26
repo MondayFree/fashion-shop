@@ -8,8 +8,9 @@ header {
   align-items: center;
   box-sizing: border-box;
   padding: 5px 100px 5px 100px;
-  background-color: whitesmoke;
-  transition: 400ms;
+  background-color: #FDFDFD;
+  transition-duration: 300ms;
+  transition-animation-timing-function: ease-out;
 }
 header .circle-nav {
   width: 18px;
@@ -19,7 +20,7 @@ header .circle-nav {
   cursor: pointer;
 }
 header .circle-nav i {
-  color: #9B9B9B;
+  color: #959595;
 }
 header .sosmed, header .navigasi {
   height: 100%;
@@ -54,7 +55,7 @@ header .hamberger {
 }
 header .hamberger .line {
   height: 5px;
-  background-color: #9B9B9B;
+  background-color: #959595;
   border-radius: 2px;
 }
 header .hamberger .line:nth-child(2) {
@@ -72,14 +73,14 @@ header aside {
   width: 80%;
   height: 100%;
   transform: translateX(0%);
-  background-color: #6e6e6e;
+  background-color: #696868;
   transition-duration: 300ms;
   transition-animation-timing-function: ease-out;
 }
 header aside .exit {
   display: flex;
   cursor: pointer;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 header aside .exit .circle-cross {
   padding: 3px;
@@ -103,7 +104,7 @@ header aside .cross .line {
 header aside .cross .line .sub-line {
   width: 100%;
   height: 5px;
-  background-color: whitesmoke;
+  background-color: #FDFDFD;
   border-radius: 20px;
 }
 header aside .cross .line:first-child .sub-line {
@@ -114,11 +115,10 @@ header aside .cross .line:last-child .sub-line {
 }
 
 header aside nav {
-  color: whitesmoke;
+  color: #FDFDFD;
   text-transform: capitalize;
 }
 header aside nav > * {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -127,19 +127,23 @@ header aside nav img {
 }
 header aside nav .separator {
   height: 2px;
-  background-color: whitesmoke;
+  background-color: #FDFDFD;
   border-radius: 20px;
 }
 header aside nav .arrow {
   width: 10px;
   height: 10px;
-  border-top: 3px solid whitesmoke;
-  border-left: 3px solid whitesmoke;
+  border-top: 3px solid #FDFDFD;
+  border-left: 3px solid #FDFDFD;
   transition-duration: 300ms;
   transition-animation-timing-function: ease-out;
 }
 header aside nav .nav-title {
   margin-left: 8px;
+}
+header aside nav .nav-el {
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 header aside nav .nav-el:first-child, header aside nav .nav-el:nth-child(7) {
   position: relative;
@@ -147,14 +151,14 @@ header aside nav .nav-el:first-child, header aside nav .nav-el:nth-child(7) {
   grid-template-columns: max-content auto 20px;
   grid-template-rows: max-content max-content;
   grid-template-areas: "satu dua tiga" "empat empat empat";
-  grid-gap: 8px;
 }
 header aside nav .nav-el:first-child .click, header aside nav .nav-el:nth-child(7) .click {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 25px;
+  height: 52px;
+  bottom: 0;
 }
 header aside nav .nav-el:first-child i, header aside nav .nav-el:nth-child(7) i {
   grid-area: satu;
@@ -178,43 +182,54 @@ header aside nav .nav-el:first-child .input-field, header aside nav .nav-el:firs
 }
 header aside nav .nav-el:first-child .input-field, header aside nav .nav-el:nth-child(7) .input-field {
   display: grid;
-  grid-template-columns: auto max-content;
-  grid-grid-template-rows: max-content;
+  grid-template-columns: auto 35px;
+  grid-grid-template-rows: max-content max-content;
+  grid-template-areas: "range range" "fill icon";
   border-radius: 3px;
   overflow: hidden;
   transition-duration: 300ms;
   transition-animation-timing-function: ease-out;
 }
+header aside nav .nav-el:first-child .input-field .range, header aside nav .nav-el:nth-child(7) .input-field .range {
+  grid-area: range;
+  height: 16px;
+}
 header aside nav .nav-el:first-child .input-field .btn-search, header aside nav .nav-el:nth-child(7) .input-field .btn-search {
-  background-color: whitesmoke;
-  width: 35px;
+  grid-area: icon;
+  background-color: #FDFDFD;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border-top-right-radius: 3px;
 }
 header aside nav .nav-el:first-child .input-field .btn-search i, header aside nav .nav-el:nth-child(7) .input-field .btn-search i {
-  color: #9B9B9B;
+  color: #454545;
 }
 header aside nav .nav-el:first-child .input-field input, header aside nav .nav-el:nth-child(7) .input-field input {
+  grid-area: fill;
   outline: none;
   border: none;
   box-sizing: border-box;
   padding: 8px;
-  background-color: whitesmoke;
-  color: rgb(100, 100, 100);
+  background-color: #FDFDFD;
+  color: #454545;
+  border-top-left-radius: 3px;
 }
 header aside nav .nav-el:first-child ul, header aside nav .nav-el:nth-child(7) ul {
   overflow: hidden;
   box-sizing: inherit;
   padding-left: 50px;
-  transition: 500ms;
+  transition: 400ms;
+}
+header aside nav .nav-el:first-child ul .range, header aside nav .nav-el:nth-child(7) ul .range {
+  height: 16px;
 }
 header aside nav .nav-el:first-child ul li, header aside nav .nav-el:nth-child(7) ul li {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 header aside nav .nav-el:first-child ul li:hover a, header aside nav .nav-el:nth-child(7) ul li:hover a {
-  color: rgb(201, 201, 201);
+  color: #959595;
 }
 header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child(7) ul li a {
   text-transform: inherit;
@@ -223,7 +238,7 @@ header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child
 }
 
 .shadow-on {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.212);
 }
 
 .side-bar-on {
@@ -239,7 +254,7 @@ header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child
 }
 
 .search-on {
-  height: 30px;
+  height: 50px;
 }
 
 .search-off {
@@ -247,7 +262,7 @@ header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child
 }
 
 .category-on {
-  height: 95px;
+  height: 135px;
 }
 
 .category-off {

@@ -1,0 +1,8 @@
+@use "duration" as  *;
+
+@mixin r-animation {
+    transition: {
+        duration: $sidebar-dr;
+        animation-timing-function: ease-out;
+    };
+}

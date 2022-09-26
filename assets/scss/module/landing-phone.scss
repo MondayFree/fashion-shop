@@ -1,0 +1,13 @@
+// intro-start
+.intro {
+    div & .intro-left {
+        width: 75%;
+    }
+
+    div & .title {
+        h3 {font-size: 30px;}
+        h1 {font-size: 55px}
+        h2 {font-size: 33px}
+    }
+}
+// intro-end

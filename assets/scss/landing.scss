@@ -1,14 +1,17 @@
-@import 'global.css';
+@use "partials/color" as *;
+@use "partials/amount" as *;
 
 // font-awesome
 @import 'module/font-awesome.css';
+
+@import 'module/global.css';
 
 @import 'module/header.css';
 
 // intro-start
 .intro {
     box-sizing: border-box;
-    padding: 65px 0px 0px 0px;
+    padding: 65px 50px 0px 50px;
     display: grid;
     grid: {
         template-columns: 50% 50%;
@@ -17,9 +20,14 @@
     justify-items: center;
     row-gap: 50px;
 
+    .intro-left {
+        width: 300px;
+        padding-top: 15px;
+    }
 
     .model {
-        width: 270px;
+        width: 100%;
+        grid-area: right;
         display: grid;
         grid: {
             direction: end;
@@ -27,10 +35,11 @@
             template-rows: max-content;
         };
         overflow: hidden;
+        margin-bottom: 5px;
 
         & > * {
-            margin-left: 25px;
-            margin-right: 25px;
+            margin-left: 35px;
+            margin-right: 35px;
         }
     }
 
@@ -46,17 +55,70 @@
         text-transform: capitalize;
         font-weight: bold;
 
-        h3 {font-size: 27px;}
-        h1 {font-size: 55px}
-        h2 {font-size: 33px;}
+        h1, h2, h3 {
+            text-align: end;
+            color: $base-dark;
+        }
+
+        h3 {
+            font-size: 35px;
+            margin-bottom: $title-down;
+        }
+
+        h1 {
+            font-size: 60px;
+            &:last-of-type {   
+                margin-bottom: $title-down;
+            }
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: $title-down;
+        }
+
         .btn {
-            width: 120px;
-            height: 35px;
-            background-color: orange;
+            width: 135px;
+            height: 50px;
+            background-color: $button;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $base-light;
+            text-transform: uppercase;
+            font-size: 17px;
+        }
+    }
+
+    .m-scroll {
+        width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bullet {
+        width: 27px;
+        height: 27px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50%;
+
+        .core-bullet {
+            width: 40%;
+            height: 40%;
+            background-color: $base-dark;
+            border-radius: 50%;
         }
     }
 }
 // intro-end
 
-// responsive
+// responsive-tablet
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
+
+// responsive-phone
+@import 'module/landing-phone.css' screen and (max-width: 500px);

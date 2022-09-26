@@ -1,6 +1,7 @@
-$base-dark: #9B9B9B;
-$base-light: whitesmoke;
-$bg-aside: #6e6e6e;
+@use "../partials/color" as *;
+@use "../partials/duration" as *;
+@use "../partials/amount" as *;
+@use "../partials/header-template" as *;
 
 header {
     position: fixed;
@@ -13,7 +14,7 @@ header {
     box-sizing: border-box;
     padding: 5px 100px 5px 100px;
     background-color: $base-light;
-    transition: 400ms;
+    @include r-animation();
     
     .circle-nav {
         width: 18px;
@@ -21,7 +22,7 @@ header {
         padding: 5px;
         border-radius: 50px;
         cursor: pointer;
-        i {color: $base-dark;}
+        i {color: $light-dark;}
     }
  
     .sosmed, .navigasi {
@@ -59,7 +60,7 @@ header {
   
         .line {
             height: 5px;
-            background-color: $base-dark;
+            background-color: $light-dark;
             border-radius: 2px;
             &:nth-child(2) {
                 width: 60%;
@@ -80,15 +81,13 @@ header aside {
     height: 100%;
     transform: translateX(0%);
     background-color: $bg-aside;
-    transition: {
-        duration: 300ms;
-        animation-timing-function: ease-out;
-    };
+    @include r-animation();
+
 
     .exit {
         display: flex;
         cursor: pointer;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         .circle-cross {
             padding: 3px;
             border-radius: 50%;
@@ -123,14 +122,11 @@ header aside {
     }
 }
 
-$sdr-range: 10px;
-
 header aside nav {
     color: $base-light;
     text-transform: capitalize;
 
     & > * {
-        margin-bottom: $sdr-range;
         display: flex;
         align-items: center;
     }
@@ -150,14 +146,17 @@ header aside nav {
         height: 10px;
         border-top: 3px solid $base-light;
         border-left: 3px solid $base-light;
-        transition: {
-            duration: 300ms;
-            animation-timing-function: ease-out;
-        };
+        @include r-animation();
+
     }
 
     .nav-title {
         margin-left: 8px;
+    }
+
+    .nav-el {
+        padding-top: $range-padding;
+        padding-bottom: $range-padding;
     }
 
     .nav-el:first-child, .nav-el:nth-child(7) {
@@ -168,7 +167,6 @@ header aside nav {
             template-rows: max-content max-content;
             template-areas: 'satu dua tiga'
                             'empat empat empat';
-            gap: 8px;
         }
 
         .click {
@@ -176,7 +174,8 @@ header aside nav {
             top: 0;
             left: 0;
             right: 0;
-            height: 25px;
+            height: $click-height;
+            bottom: 0;
         }
 
         i {grid-area: satu;}
@@ -195,44 +194,48 @@ header aside nav {
             grid-area: empat;
             border: none;
             padding: 0;
-            transition: {
-                duration: 300ms;
-                animation-timing-function: ease-out;
-            };
+            @include r-animation();
         }
 
         .input-field {
             display: grid;
             grid: {
-                template-columns: auto max-content;
-                grid-template-rows: max-content;
+                template-columns: auto 35px;
+                grid-template-rows: max-content max-content;
+                template-areas: 'range range'
+                                'fill icon';
             }
             border-radius: 3px;
             overflow: hidden;
-            transition: {
-                duration: 300ms;
-                animation-timing-function: ease-out;
-            };
+            @include r-animation();
+
+            .range {
+                grid-area: range;
+                height: $range-height;
+            }
 
             .btn-search {
+                grid-area: icon;
                 background-color: $base-light;
-                width: 35px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                border-top-right-radius: 3px;
                 i {
                     color: $base-dark;
                 }
             }
 
             input {
+                grid-area: fill;
                 outline: none;
                 border: none;
                 box-sizing: border-box;
                 padding: 8px;
                 background-color: $base-light;
-                color: rgb(100, 100, 100);
+                color: $base-dark;
+                border-top-left-radius: 3px;
             }
         }
 
@@ -240,12 +243,13 @@ header aside nav {
             overflow: hidden;
             box-sizing: inherit;
             padding-left: 50px;
-            transition: 500ms;
+            transition: $drop-dr;
+            .range {height: $range-height;}
             li {
-                margin-bottom: $sdr-range;
+                margin-bottom: $range-padding;
 
                 &:hover a {
-                    color: rgb(201, 201, 201);
+                    color: $light-dark;
                 }
                 a {
                     text-transform: inherit;
@@ -257,11 +261,11 @@ header aside nav {
     }
 }
 
-.shadow-on {box-shadow: 0 2px 2px rgba(0, 0, 0, 0.336);}
+.shadow-on {box-shadow: $header-shadow;}
 .side-bar-on {transform: translateX(-100%);}
 .arrow-off {transform: rotate(-45deg);}
 .arrow-on {transform: rotate(-135deg);}
-.search-on {height: 30px;}
+.search-on {height: 50px;}
 .search-off {height: 0;}
-.category-on {height: 95px;}
+.category-on {height: 135px;}
 .category-off {height: 0;}

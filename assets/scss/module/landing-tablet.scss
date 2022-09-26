@@ -11,6 +11,16 @@ header {
 
 // intro-start
 .intro {
-    div & {grid-template-columns: 100%};
+    div & {
+        grid-template-columns: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    div & .title {
+        align-items: center;
+
+        h1, h2, h3 {text-align: center;}
+    }
 }
 // intro-end

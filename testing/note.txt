@@ -75,3 +75,7 @@ berdasarkan jumlah element
 pindah tab ->
 pindah aplikasi
 scroll down
+
+
+variabel color, size
+repeated design

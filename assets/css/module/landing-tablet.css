@@ -11,4 +11,12 @@ header .sosmed, header .navigasi {
 
 div .intro {
   grid-template-columns: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+div .intro .title {
+  align-items: center;
+}
+div .intro .title h1, div .intro .title h2, div .intro .title h3 {
+  text-align: center;
 }
