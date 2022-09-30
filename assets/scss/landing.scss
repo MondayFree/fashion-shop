@@ -1,17 +1,19 @@
 @use "partials/color" as *;
 @use "partials/amount" as *;
+@use "partials/duration" as *;
 
 // font-awesome
 @import 'module/font-awesome.css';
 
 @import 'module/global.css';
-
 @import 'module/header.css';
+@import 'module/promo-slide.css';
 
 // intro-start
 .intro {
     box-sizing: border-box;
     padding: 65px 50px 0px 50px;
+    margin-bottom: 50px;
     display: grid;
     grid: {
         template-columns: 50% 50%;
@@ -91,34 +93,60 @@
     }
 
     .m-scroll {
-        width: 30%;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .bullet {
-        width: 27px;
+        width: 100%;
         height: 27px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border-radius: 50%;
+        position: relative;
+    }
 
-        .core-bullet {
-            width: 40%;
-            height: 40%;
-            background-color: $base-dark;
+    .scroll-bullet {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .bullet {
             border-radius: 50%;
+            background-color: $base-dark;
+            transition: $sidebar-dr;
+            margin-left: 2px;
+            margin-right: 2px;
         }
     }
+
+
+    .m-scroll-layer {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .l-bullet {
+            width: 24px;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+.normal-bullet {
+    width: 11px;
+    height: 11px;
+}
+
+.big-bullet {
+    width: 16px;
+    height: 16px;
 }
 // intro-end
 
 // responsive-tablet
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
+@import 'module/promo-slide-tablet.css' screen and (max-width: 768px);
 
 // responsive-phone
 @import 'module/landing-phone.css' screen and (max-width: 500px);
+@import 'module/promo-slide-phone.css' screen and (max-width: 500px);

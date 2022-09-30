@@ -1,0 +1,8 @@
+slider promo
+
+mekanisme slider
+- ketika slide sudah sampai tiga, maka tambahkan 3 element baru
+- ketika slide sudah smapi tiga untuk yang kedua kali, tambakan 3
+  element baru dan hapus 3 element sebelumnya
+
+  ?i=<?= uniqid(); ?>

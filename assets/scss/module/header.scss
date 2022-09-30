@@ -8,6 +8,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +61,7 @@ header {
   
         .line {
             height: 5px;
-            background-color: $light-dark;
+            background-color: $base-dark;
             border-radius: 2px;
             &:nth-child(2) {
                 width: 60%;
@@ -70,15 +71,25 @@ header {
     }
 }
 
-header aside {
-    box-sizing: border-box;
-    padding: 15px;
+header .top-layer {
     position: fixed;
     top: 0;
     bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.295);
+    transition: $sidebar-dr;
+}
+
+header aside {
+    position: fixed;
+    box-sizing: border-box;
+    padding: 15px;
+    top: 0;
     left: 100%;
     width: 80%;
     height: 100%;
+    margin-right: 100%;
     transform: translateX(0%);
     background-color: $bg-aside;
     @include r-animation();
@@ -269,3 +280,10 @@ header aside nav {
 .search-off {height: 0;}
 .category-on {height: 135px;}
 .category-off {height: 0;}
+
+div header .top-layer-transparant {
+    opacity: 0;
+}
+div header .top-layer-gone {
+    display: none;
+}

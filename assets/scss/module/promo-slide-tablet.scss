@@ -1,0 +1,18 @@
+.big-img {
+    width: 150px;
+}
+
+.normal-img {
+    width: 150px;
+}
+
+.price-off {
+    width: auto;
+}
+
+.promo-grabber {padding: 5px 0 5px 0;}
+
+.promo-content .promo-product {
+    height: 230px;
+    &:first-child, &:last-child {display: none;}
+}

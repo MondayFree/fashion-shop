@@ -1,11 +1,15 @@
 @import 'module/font-awesome.css';
 @import 'module/global.css';
 @import 'module/header.css';
+@import 'module/promo-slide.css';
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
+@import 'module/promo-slide-tablet.css' screen and (max-width: 768px);
 @import 'module/landing-phone.css' screen and (max-width: 500px);
+@import 'module/promo-slide-phone.css' screen and (max-width: 500px);
 .intro {
   box-sizing: border-box;
   padding: 65px 50px 0px 50px;
+  margin-bottom: 50px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-auto-rows: max-content;
@@ -71,24 +75,46 @@
   font-size: 17px;
 }
 .intro .m-scroll {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-}
-.intro .bullet {
-  width: 27px;
+  width: 100%;
   height: 27px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border-radius: 50%;
+  position: relative;
 }
-.intro .bullet .core-bullet {
-  width: 40%;
-  height: 40%;
-  background-color: #454545;
+.intro .scroll-bullet {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.intro .scroll-bullet .bullet {
   border-radius: 50%;
+  background-color: #454545;
+  transition: 300ms;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.intro .m-scroll-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro .m-scroll-layer .l-bullet {
+  width: 24px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.normal-bullet {
+  width: 11px;
+  height: 11px;
+}
+
+.big-bullet {
+  width: 16px;
+  height: 16px;
 }

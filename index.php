@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fashion shop</title>
-    <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="assets/css/landing.css?i=<?= uniqid(); ?>">
 </head>
 <body>
     <!-- container-start -->
@@ -52,9 +52,7 @@
                 <div class="line"></div>
             </div>
 
-            <!-- <div class="top-layer" id="top-layer"></div> -->
-
-            <aside id="side-bar" class="">
+            <aside id="side-bar">
                 <div class="exit">
                     <div class="circle-cross show">
                         <div class="cross">
@@ -214,6 +212,7 @@
     </div>
     <!-- container-end -->
 
-    <script src="assets/js/main.js" type="module"></script>
+
+    <script src="assets/js/main.js?i=<?= uniqid(); ?>" type="module"></script>
 </body>
 </html>

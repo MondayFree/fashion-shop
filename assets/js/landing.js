@@ -1,5 +1,5 @@
 // import
-import {HeaderEvent, LandingSlide} from './module/landing-init.js';
+import {HeaderEvent, LandingSlide, PromoSlide} from './module/landing-init.js';
 
 
 // header-start
@@ -19,7 +19,7 @@ const headerEvent = new HeaderEvent(sideBar, arrows, searchField, category, head
 const slide = document.getElementById('slide');
 const slider = new LandingSlide(slide);
 
-Array.from(document.getElementsByClassName('bullet')).forEach(el => {
+Array.from(document.getElementsByClassName('l-bullet')).forEach(el => {
     el.addEventListener('click', event => {
         switch(el.id) {
             case 'one' :
@@ -44,7 +44,7 @@ addEventListener('visibilitychange', event => {
 
 let check;
 setInterval(() => {
-    if(scrollY <= 60) {
+    if(scrollY < 50) {
         if(check) {
             slider.startIvl();
             check = false;
@@ -53,5 +53,21 @@ setInterval(() => {
         slider.stopIvl();
         check = true;
     }
-}, 400);
+}, 300);
 // slider-end
+
+// promo-slide-start
+const promo = document.getElementById('promo-product');
+const scrollNav = document.getElementsByClassName('scroll-nav');
+const promoSlider = new PromoSlide(promo);
+
+Array.from(scrollNav).forEach((el, ind) => {
+    el.addEventListener('click', event => {
+        if(ind == 0) {
+            promoSlider.previousSlide();
+            return;
+        }
+        promoSlider.nextSlide();
+    });
+});
+// promo-slide-end

@@ -10,3 +10,8 @@ div .intro .title h1 {
 div .intro .title h2 {
   font-size: 33px;
 }
+
+div .promo .scroll-nav {
+  margin-right: 25px;
+  margin-left: 25px;
+}

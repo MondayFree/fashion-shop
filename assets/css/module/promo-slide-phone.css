@@ -1,0 +1,6 @@
+.promo-content .promo-product .wrap .price p:first-child {
+  font-size: 18px;
+}
+.promo-content .promo-product .wrap .price p:last-child {
+  font-size: 31px;
+}

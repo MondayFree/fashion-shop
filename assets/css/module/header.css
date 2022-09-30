@@ -3,6 +3,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +56,7 @@ header .hamberger {
 }
 header .hamberger .line {
   height: 5px;
-  background-color: #959595;
+  background-color: #454545;
   border-radius: 2px;
 }
 header .hamberger .line:nth-child(2) {
@@ -63,15 +64,25 @@ header .hamberger .line:nth-child(2) {
   align-self: flex-end;
 }
 
-header aside {
-  box-sizing: border-box;
-  padding: 15px;
+header .top-layer {
   position: fixed;
   top: 0;
   bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.295);
+  transition: 300ms;
+}
+
+header aside {
+  position: fixed;
+  box-sizing: border-box;
+  padding: 15px;
+  top: 0;
   left: 100%;
   width: 80%;
   height: 100%;
+  margin-right: 100%;
   transform: translateX(0%);
   background-color: #696868;
   transition-duration: 300ms;
@@ -267,4 +278,12 @@ header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child
 
 .category-off {
   height: 0;
+}
+
+div header .top-layer-transparant {
+  opacity: 0;
+}
+
+div header .top-layer-gone {
+  display: none;
 }

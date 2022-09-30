@@ -1,0 +1,88 @@
+.promo-grabber {
+  padding: 50px 0 50px 0;
+  background-color: #F5F5F5;
+}
+
+.promo {
+  max-width: 1100px;
+  margin: auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: max-content auto max-content;
+  grid-template-rows: max-content;
+  align-items: center;
+}
+.promo .scroll-nav {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E33929;
+  font-size: 40px;
+  cursor: pointer;
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+.promo-content {
+  display: grid;
+  grid-template-columns: repeat(8, max-content);
+  grid-template-rows: max-content;
+  overflow: hidden;
+}
+.promo-content .promo-product {
+  width: 200px;
+  height: 350px;
+  margin-left: 40px;
+  margin-right: 40px;
+  position: relative;
+}
+.promo-content .promo-product .wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content;
+  justify-content: center;
+  align-content: center;
+}
+.promo-content .promo-product .wrap img {
+  transition: 300ms;
+}
+.promo-content .promo-product .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #E33929;
+  font-weight: bold;
+  transition: 300ms;
+}
+.promo-content .promo-product .price p:first-child {
+  border-radius: 50%;
+  background-color: #E8EFF0;
+  text-align: center;
+  padding: 10px;
+  font-size: 27px;
+}
+.promo-content .promo-product .price p:last-child {
+  text-align: center;
+  font-size: 40px;
+}
+
+.big-img {
+  width: 250px;
+}
+
+.normal-img {
+  width: 180px;
+}
+
+.price-off {
+  width: 0;
+}

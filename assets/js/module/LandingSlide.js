@@ -4,7 +4,7 @@ class LandingSlide {
     #rmvElement;
     #setSlide = {
         behavior: 'smooth',
-        block: 'nearest', 
+        block: 'center', 
         inline: 'center'
     };
     #ivl;
@@ -14,32 +14,43 @@ class LandingSlide {
     #numId = 0;
     #elId;
     #nextTimeout;
+    #navigation;
+    #crtNav;
 
     constructor(slide) {
         this.#slide = slide;
         this.#sldElement = slide.firstElementChild;
         this.#rmvElement = slide.firstElementChild;
         this.#elId = this.#slide.firstElementChild;
+        this.#navigation = slide.nextElementSibling
+            .lastElementChild.children;
+        this.#crtNav = this.#navigation[0];
         this.startIvl();
+        slide.scrollLeft = 35;
     }
 
     #addElement() {
         let img = document.createElement('img');
         img.setAttribute('alt', 'something went wrong');
         let contentSrc = 'assets/img/woman/';
+        let number;
         switch(this.#mdl) {
             case 1 :
                 contentSrc += 'raamin.png';
+                number = 0;
                 break;
             case 2 :
                 contentSrc += 'ospan.png';
+                number = 1;
                 break;
             case 3 :
                 contentSrc += 'rendy.png';
+                number = 2;
                 this.#mdl = 0;
                 break;            
         }
         img.setAttribute('src', contentSrc);
+        img.classList.add(number);
         this.#slide.style.gridTemplateColumns = `repeat(${this.#column += 1}, 100%)`;
         this.#slide.appendChild(img);
         this.#mdl++;
@@ -66,10 +77,21 @@ class LandingSlide {
         }
     }
 
+    #changeCrtNav(index) {
+        if(this.#navigation[index] == this.#crtNav) return;
+        this.#crtNav.classList.toggle('normal-bullet');
+        this.#crtNav.classList.toggle('big-bullet');
+        this.#crtNav = this.#navigation[index];
+        this.#crtNav.classList.toggle('normal-bullet');
+        this.#crtNav.classList.toggle('big-bullet');
+    }
+
     manualScroll(nth) {
         this.stopIvl();
         clearTimeout(this.#nextTimeout);
-        document.getElementById(nth).scrollIntoView(this.#setSlide);
+        const cnt = document.getElementById(nth);
+        cnt.scrollIntoView(this.#setSlide);
+        this.#changeCrtNav(parseInt(cnt.classList.item(0)));
         this.#nextTimeout = setTimeout(() => this.startIvl(), this.#timeIvl);
     }
 
@@ -78,6 +100,7 @@ class LandingSlide {
             this.#addElement();
             if(this.#slide.children.length > 12) this.#removeElement(slide);
             this.#sldElement.scrollIntoView(this.#setSlide); 
+            this.#changeCrtNav(parseInt(this.#sldElement.classList.item(0)));
             if(this.#numId == 3) {
                 this.#removeId();
                 this.#addId();
