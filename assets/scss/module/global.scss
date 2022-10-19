@@ -49,9 +49,11 @@ table {
 	border-spacing: 0;
 }
 
-body {
+body, html {
+	width: 100%;
     background-color: $base-light;
     font-family: arial;
+	box-sizing: border-box;
 }
 
 .container {

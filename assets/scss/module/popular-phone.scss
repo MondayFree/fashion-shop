@@ -2,3 +2,12 @@
     width: 16em;
     font-size: 20px;
 }
+
+.group-product {
+    & > * {
+        grid: {
+            template-columns: repeat(2, 50%);
+            template-rows: repeat(2, max-content);
+        }
+    }
+}

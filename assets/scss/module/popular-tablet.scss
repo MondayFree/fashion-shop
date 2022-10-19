@@ -1,0 +1,15 @@
+.group-product {
+    overflow-x: scroll;
+
+    & > * {
+        grid: {
+            template-columns: repeat(3, 1fr);
+            template-rows: repeat(2, max-content);
+            auto-rows: 0;
+        }
+    }
+}
+
+.slide-left, .slide-right {
+    visibility: hidden;
+}
