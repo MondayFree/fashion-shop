@@ -2,10 +2,12 @@
 @import 'module/global.css';
 @import 'module/header.css';
 @import 'module/promo-slide.css';
+@import 'module/popular.css';
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
 @import 'module/promo-slide-tablet.css' screen and (max-width: 768px);
 @import 'module/landing-phone.css' screen and (max-width: 500px);
 @import 'module/promo-slide-phone.css' screen and (max-width: 500px);
+@import 'module/popular-phone.css' screen and (max-width: 500px);
 .intro {
   box-sizing: border-box;
   padding: 65px 50px 0px 50px;

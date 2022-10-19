@@ -1,5 +1,5 @@
 // import
-import {HeaderEvent, LandingSlide, PromoSlide} from './module/landing-init.js';
+import {HeaderEvent, LandingSlide, PromoSlide, Popular} from './module/landing-init.js';
 
 
 // header-start
@@ -71,3 +71,14 @@ Array.from(scrollNav).forEach((el, ind) => {
     });
 });
 // promo-slide-end
+
+// popular-start
+const popularTab = Array.from(document.getElementsByClassName('popular-tab-element'));
+const indicator = document.getElementById('indicator');
+const popular = new Popular(popularTab, indicator);
+popularTab.forEach((el, ind) => {
+    el.addEventListener('click', event => {
+        popular.moveTab(ind);
+    });
+});
+// popular-end

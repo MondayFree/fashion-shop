@@ -1,0 +1,41 @@
+.popular {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-rows: repeat(max-content, 2);
+  grid-template-columns: 100vw;
+  grid-gap: 15px;
+  justify-items: center;
+}
+
+.popular-tab {
+  width: 16em;
+  font-size: 26px;
+  color: #696868;
+  text-transform: capitalize;
+  display: grid;
+  grid-grid-template-columns: 100%;
+  grid-template-rows: repeat(max-content, 2);
+  grid-gap: 5px;
+}
+.popular-tab ul {
+  display: flex;
+  justify-content: space-between;
+}
+.popular-tab ul li {
+  display: inline-block;
+  cursor: pointer;
+}
+.popular-tab .indicator {
+  width: 85px;
+  height: 0.15em;
+  border-radius: 2px;
+  background-color: #E33929;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.popular-product {
+  width: 100%;
+  height: 300px;
+}

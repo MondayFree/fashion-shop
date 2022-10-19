@@ -1,3 +1,4 @@
+// partials
 @use "partials/color" as *;
 @use "partials/amount" as *;
 @use "partials/duration" as *;
@@ -5,9 +6,13 @@
 // font-awesome
 @import 'module/font-awesome.css';
 
+// global-start
 @import 'module/global.css';
+// global-end
+
+// header-start
 @import 'module/header.css';
-@import 'module/promo-slide.css';
+// header-end
 
 // intro-start
 .intro {
@@ -143,6 +148,14 @@
 }
 // intro-end
 
+// promo-slide-start
+@import 'module/promo-slide.css';
+// promo-slide-end
+
+// popular-start
+@import 'module/popular.css';
+// popular-end
+
 // responsive-tablet
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
 @import 'module/promo-slide-tablet.css' screen and (max-width: 768px);
@@ -150,3 +163,4 @@
 // responsive-phone
 @import 'module/landing-phone.css' screen and (max-width: 500px);
 @import 'module/promo-slide-phone.css' screen and (max-width: 500px);
+@import 'module/popular-phone.css' screen and (max-width: 500px);

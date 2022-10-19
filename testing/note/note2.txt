@@ -6,3 +6,8 @@ mekanisme slider
   element baru dan hapus 3 element sebelumnya
 
   ?i=<?= uniqid(); ?>
+
+
+popular product
+- di tablet dan hp terjadi pengurangan data(secara horizontal) yang menyesuaikan denang u kurang layar
+- di tablet dan hp menggunakan slider tangan yang responsive
