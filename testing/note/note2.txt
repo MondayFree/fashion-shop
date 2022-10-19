@@ -9,5 +9,5 @@ mekanisme slider
 
 
 popular product
-- di tablet dan hp terjadi pengurangan data(secara horizontal) yang menyesuaikan denang u kurang layar
+- di tablet dan hp terjadi pengurangan data(secara horizontal) yang menyesuaikan dengan ukuran layar
 - di tablet dan hp menggunakan slider tangan yang responsive
