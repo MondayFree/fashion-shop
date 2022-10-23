@@ -12,7 +12,7 @@
 .popular-tab {
   width: 16em;
   font-size: 26px;
-  color: #696868;
+  color: rgb(105, 104, 104);
   text-transform: capitalize;
   display: grid;
   grid-grid-template-columns: 100%;

@@ -1,0 +1,8 @@
+.blog {
+    grid: {
+        template-columns: 80%;
+        template-rows: max-content;
+        template-auto-rows: max-content;
+        template-areas: 'title';
+    }
+}

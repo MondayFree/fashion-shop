@@ -21,7 +21,7 @@ header .circle-nav {
   cursor: pointer;
 }
 header .circle-nav i {
-  color: #959595;
+  color: rgb(149, 149, 149);
 }
 header .sosmed, header .navigasi {
   height: 100%;
@@ -84,7 +84,7 @@ header aside {
   height: 100%;
   margin-right: 100%;
   transform: translateX(0%);
-  background-color: #696868;
+  background-color: rgb(105, 104, 104);
   transition-duration: 300ms;
   transition-animation-timing-function: ease-out;
 }
@@ -240,7 +240,7 @@ header aside nav .nav-el:first-child ul li, header aside nav .nav-el:nth-child(7
   margin-bottom: 18px;
 }
 header aside nav .nav-el:first-child ul li:hover a, header aside nav .nav-el:nth-child(7) ul li:hover a {
-  color: #959595;
+  color: rgb(149, 149, 149);
 }
 header aside nav .nav-el:first-child ul li a, header aside nav .nav-el:nth-child(7) ul li a {
   text-transform: inherit;

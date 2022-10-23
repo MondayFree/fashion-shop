@@ -1,0 +1,62 @@
+@use '../partials/color' as *;
+
+.blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(223, 223, 223);
+    display: grid;
+    grid: {
+        template-columns: repeat(3, 250px);
+        template-rows: max-content;
+        template-auto-rows: max-content;
+        template-areas: 'title title title';
+    }
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 25px;
+    background-image: url(../../img/watch.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    margin-bottom: 50px;
+}
+
+.blog-title {
+    grid-area: title;
+    font-weight: bold;
+    h2 {
+        font-size: 27px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+        color: $base-dark;
+    }
+
+    p {color: $bg-aside;}
+}
+
+.blog-article {
+    font-weight: bold;
+
+    img {
+        width: 100%;
+    }
+
+    .date {
+        font-size: 12px;
+        color: $bg-aside;
+    }
+
+    h3 {
+        color: $base-dark;
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13.5px;
+        color: $bg-aside;
+        text-align: justify;
+    }
+
+    & > * {margin-bottom: 7px;}
+}

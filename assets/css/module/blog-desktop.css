@@ -1,0 +1,6 @@
+.blog {
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: max-content;
+  grid-template-auto-rows: max-content;
+  grid-template-areas: "title title";
+}

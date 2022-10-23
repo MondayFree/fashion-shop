@@ -156,8 +156,13 @@
 @import 'module/popular.css';
 // popular-end
 
+// blog-start
+@import 'module/blog.css';
+// blog-end
+
 // reponsive-desktop
 @import 'module/popular-desktop.css' screen and (max-width: 920px);
+@import 'module/blog-desktop.css' screen and (max-width: 820px);
 
 // responsive-tablet
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
@@ -168,3 +173,4 @@
 @import 'module/landing-phone.css' screen and (max-width: 500px);
 @import 'module/promo-slide-phone.css' screen and (max-width: 500px);
 @import 'module/popular-phone.css' screen and (max-width: 500px);
+@import 'module/blog-phone.css' screen and (max-width: 500px);
