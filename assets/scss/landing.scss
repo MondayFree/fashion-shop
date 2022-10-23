@@ -156,6 +156,9 @@
 @import 'module/popular.css';
 // popular-end
 
+// reponsive-desktop
+@import 'module/popular-desktop.css' screen and (max-width: 920px);
+
 // responsive-tablet
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
 @import 'module/promo-slide-tablet.css' screen and (max-width: 768px);

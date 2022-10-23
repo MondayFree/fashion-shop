@@ -53,7 +53,7 @@
     box-sizing: border-box;
     display: grid;
     grid: {
-        template-columns: max-content 75% max-content;
+        template-columns: max-content 750px max-content;
         grid-template-rows: max-content;
         gap: 17px;
     }
@@ -67,11 +67,13 @@
     align-items: center;
     border-radius: 50%;
     width: 50px;
+    cursor: pointer;
 }
 
 .group-product {
     overflow: hidden;
     display: grid;
+    scroll-behavior: smooth;
 
     grid: {
         template-columns: repeat(3, 100%);
@@ -147,6 +149,7 @@
                 width: 10em;
                 height: 3em;
                 background-color: $button;
+                cursor: pointer;
             }
         }
     }

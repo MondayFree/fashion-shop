@@ -3,6 +3,7 @@
 @import 'module/header.css';
 @import 'module/promo-slide.css';
 @import 'module/popular.css';
+@import 'module/popular-desktop.css' screen and (max-width: 920px);
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
 @import 'module/promo-slide-tablet.css' screen and (max-width: 768px);
 @import 'module/popular-tablet.css' screen and (max-width: 768px);

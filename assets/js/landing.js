@@ -75,10 +75,37 @@ Array.from(scrollNav).forEach((el, ind) => {
 // popular-start
 const popularTab = Array.from(document.getElementsByClassName('popular-tab-element'));
 const indicator = document.getElementById('indicator');
-const popular = new Popular(popularTab, indicator);
+const groupProduct = document.getElementById('group-product');
+const popular = new Popular(groupProduct, popularTab, indicator);
+const slidePopular = Array.from(document.getElementsByClassName('slide-popular'));
+
 popularTab.forEach((el, ind) => {
     el.addEventListener('click', event => {
         popular.moveTab(ind);
+        popular.scrollContent(ind);
     });
+});
+
+let currentSlide = 0;
+slidePopular.forEach((el, ind) => {
+    el.addEventListener('click', event => {
+        if(ind == 1) {
+            if(currentSlide == 2) return;
+            currentSlide++;
+            popular.moveTab(currentSlide);
+            popular.scrollContent(currentSlide);
+            return;
+        } else {   
+            if(currentSlide == 0) return;
+            currentSlide--;
+            popular.moveTab(currentSlide);
+            popular.scrollContent(currentSlide);
+        }
+    });
+});
+
+groupProduct.addEventListener('scroll', event => {
+    popular.incValue();
+    popular.runCheckScroll();
 });
 // popular-end
