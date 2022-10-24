@@ -160,6 +160,10 @@
 @import 'module/blog.css';
 // blog-end
 
+// footer-start
+@import 'module/footer.css';
+// footer-end
+
 // reponsive-desktop
 @import 'module/popular-desktop.css' screen and (max-width: 920px);
 @import 'module/blog-desktop.css' screen and (max-width: 820px);
@@ -168,9 +172,11 @@
 @import 'module/landing-tablet.css' screen and (max-width: 768px);
 @import 'module/promo-slide-tablet.css' screen and (max-width: 768px);
 @import 'module/popular-tablet.css' screen and (max-width: 768px);
+@import 'module/footer-tablet.css' screen and (max-width: 768px);
 
 // responsive-phone
 @import 'module/landing-phone.css' screen and (max-width: 500px);
 @import 'module/promo-slide-phone.css' screen and (max-width: 500px);
 @import 'module/popular-phone.css' screen and (max-width: 500px);
 @import 'module/blog-phone.css' screen and (max-width: 500px);
+@import 'module/footer-phone.css' screen and (max-width: 500px);

@@ -1,0 +1,152 @@
+@use '../partials/color' as *;
+
+footer {
+    box-sizing: border-box;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    padding-right: 10%;
+    padding-left: 10%;
+    background-image: url(../../img/black-men2.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: bold;
+
+    color: white;
+
+    hr {
+        outline: none;
+        background-color: $bg-aside;
+        border: 1px solid $bg-aside;
+        margin: 0;
+        &:first-of-type {margin-bottom: 30px;}
+        &:last-of-type {margin-bottom: 15px;}
+    }
+}
+
+.sign-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+    
+    .sign-letter {
+        text-transform: uppercase;
+        color: $base-light;
+        margin-right: 70px;
+        padding-top: 15px;
+        line-height: 22px;
+    }
+
+    form {
+        padding-top: 15px;
+    }
+
+    input {
+        width: 55%;
+        outline: none;
+        padding: 7px;
+        border: 1px solid currentColor;
+        color: $light-dark;
+        background-color: transparent;
+        border-radius: 0;
+        margin-right: 5px;
+    }
+
+    button {
+        outline: none;
+        padding: 9px;
+        font-weight: inherit;
+        text-transform: uppercase;
+        border: none;
+        color: $base-light;
+        background-color: $bg-aside;
+        font-size: 12px
+    }
+}
+
+.links {
+    display: grid;
+    grid: {
+        template-columns: repeat(3, 1fr) 1.3fr;
+        template-rows: max-content;
+        template-auto-rows: max-content;
+        gap: 15px;
+    }
+    text-transform: capitalize;
+    margin-bottom: 30px;
+
+    .title {
+        font-size: 16px;
+        margin-bottom: 20px;
+        color: $base-light;
+    }
+
+    ul {
+        font-size: 13px;
+        li {
+            margin-bottom: 10px;
+            color: $light-dark;
+            line-height: 18px;
+        }
+    }
+
+    .contact {
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            display: flex;
+            i {margin-right: 10px;}
+        }
+
+        .shortcut i {
+            border: 1px solid $base-light;
+            padding: 7px;
+            border-radius: 50px;
+            margin-right: 3px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .instagram {
+        overflow: hidden;
+        .boxes {
+            display: grid;
+            grid: {
+                template-columns: repeat(auto-fill, minmax(60px, 1fr));
+                template-rows: 70px 70px;
+                gap: 8px;
+            }
+            .box-item {
+                background-color: $bg-aside;
+            }
+        }
+    }
+
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    text-align: center;
+    font-size: 13px;
+    color: $base-light;
+
+    & > * {padding-bottom: 15px;}
+
+    .bank {
+        display: flex;
+        align-items: center;
+        img {
+            width: 40px;
+            margin-left: 5px;
+        }
+    }
+}

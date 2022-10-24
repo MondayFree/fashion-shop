@@ -1,0 +1,137 @@
+footer {
+  box-sizing: border-box;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 10%;
+  padding-left: 10%;
+  background-image: url(../../img/black-men2.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+  color: white;
+}
+footer hr {
+  outline: none;
+  background-color: rgb(105, 104, 104);
+  border: 1px solid rgb(105, 104, 104);
+  margin: 0;
+}
+footer hr:first-of-type {
+  margin-bottom: 30px;
+}
+footer hr:last-of-type {
+  margin-bottom: 15px;
+}
+
+.sign-up {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.sign-up .sign-letter {
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-right: 70px;
+  padding-top: 15px;
+  line-height: 22px;
+}
+.sign-up form {
+  padding-top: 15px;
+}
+.sign-up input {
+  width: 55%;
+  outline: none;
+  padding: 7px;
+  border: 1px solid currentColor;
+  color: rgb(149, 149, 149);
+  background-color: transparent;
+  border-radius: 0;
+  margin-right: 5px;
+}
+.sign-up button {
+  outline: none;
+  padding: 9px;
+  font-weight: inherit;
+  text-transform: uppercase;
+  border: none;
+  color: #FDFDFD;
+  background-color: rgb(105, 104, 104);
+  font-size: 12px;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 1.3fr;
+  grid-template-rows: max-content;
+  grid-template-auto-rows: max-content;
+  grid-gap: 15px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.links .title {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #FDFDFD;
+}
+.links ul {
+  font-size: 13px;
+}
+.links ul li {
+  margin-bottom: 10px;
+  color: rgb(149, 149, 149);
+  line-height: 18px;
+}
+.links .contact ul {
+  margin-bottom: 20px;
+}
+.links .contact li {
+  display: flex;
+}
+.links .contact li i {
+  margin-right: 10px;
+}
+.links .contact .shortcut i {
+  border: 1px solid #FDFDFD;
+  padding: 7px;
+  border-radius: 50px;
+  margin-right: 3px;
+  margin-bottom: 10px;
+}
+.links .instagram {
+  overflow: hidden;
+}
+.links .instagram .boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-rows: 70px 70px;
+  grid-gap: 8px;
+}
+.links .instagram .boxes .box-item {
+  background-color: rgb(105, 104, 104);
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  text-align: center;
+  font-size: 13px;
+  color: #FDFDFD;
+}
+.copyright > * {
+  padding-bottom: 15px;
+}
+.copyright .bank {
+  display: flex;
+  align-items: center;
+}
+.copyright .bank img {
+  width: 40px;
+  margin-left: 5px;
+}
