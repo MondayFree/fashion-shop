@@ -65,6 +65,7 @@
 }
 .intro .title h1 {
   font-size: 60px;
+  font-weight: bolder;
 }
 .intro .title h1:last-of-type {
   margin-bottom: 13px;

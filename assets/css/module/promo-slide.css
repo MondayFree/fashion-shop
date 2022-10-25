@@ -61,7 +61,7 @@
   justify-content: space-between;
   overflow: hidden;
   color: #E33929;
-  font-weight: bold;
+  font-weight: bolder;
   transition: 300ms;
 }
 .promo-content .promo-product .price p:first-child {

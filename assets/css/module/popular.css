@@ -109,6 +109,7 @@
 .group-product > * .detail-img h3 {
   text-transform: capitalize;
   font-size: 1.1em;
+  font-weight: bolder;
 }
 .group-product > * .detail-img h3:last-of-type {
   font-size: 1.6em;

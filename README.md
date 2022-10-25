@@ -1,2 +1,2 @@
 # fashion-shop
-web statis
+landing page
