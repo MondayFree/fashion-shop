@@ -1,2 +1,2 @@
 # fashion-shop
-landing page
+landing page fashion
